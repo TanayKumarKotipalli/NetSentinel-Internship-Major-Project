@@ -1,0 +1,252 @@
+[
+    {
+        "id": "TH-1000",
+        "type": "Neptune",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1001",
+        "type": "Satan",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1002",
+        "type": "Satan",
+        "severity": "Critical"
+    },
+    {
+        "id": "TH-1003",
+        "type": "DoS",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1004",
+        "type": "DoS",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1005",
+        "type": "Smurf",
+        "severity": "Critical"
+    },
+    {
+        "id": "TH-1006",
+        "type": "Neptune",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1007",
+        "type": "Probe",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1008",
+        "type": "Neptune",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1009",
+        "type": "Probe",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1010",
+        "type": "Probe",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1011",
+        "type": "Satan",
+        "severity": "Critical"
+    },
+    {
+        "id": "TH-1012",
+        "type": "DoS",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1013",
+        "type": "Smurf",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1014",
+        "type": "DoS",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1015",
+        "type": "Satan",
+        "severity": "Critical"
+    },
+    {
+        "id": "TH-1016",
+        "type": "Satan",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1017",
+        "type": "Satan",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1018",
+        "type": "DoS",
+        "severity": "Critical"
+    },
+    {
+        "id": "TH-1019",
+        "type": "Smurf",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1020",
+        "type": "Satan",
+        "severity": "Critical"
+    },
+    {
+        "id": "TH-1021",
+        "type": "Satan",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1022",
+        "type": "Neptune",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1023",
+        "type": "Satan",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1024",
+        "type": "Smurf",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1025",
+        "type": "Smurf",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1026",
+        "type": "DoS",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1027",
+        "type": "Satan",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1028",
+        "type": "DoS",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1029",
+        "type": "Probe",
+        "severity": "Critical"
+    },
+    {
+        "id": "TH-1030",
+        "type": "Smurf",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1031",
+        "type": "Smurf",
+        "severity": "Critical"
+    },
+    {
+        "id": "TH-1032",
+        "type": "Neptune",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1033",
+        "type": "Satan",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1034",
+        "type": "Smurf",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1035",
+        "type": "Probe",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1036",
+        "type": "Satan",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1037",
+        "type": "Satan",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1038",
+        "type": "Neptune",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1039",
+        "type": "Smurf",
+        "severity": "Critical"
+    },
+    {
+        "id": "TH-1040",
+        "type": "Satan",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1041",
+        "type": "Neptune",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1042",
+        "type": "Probe",
+        "severity": "Critical"
+    },
+    {
+        "id": "TH-1043",
+        "type": "Probe",
+        "severity": "Medium"
+    },
+    {
+        "id": "TH-1044",
+        "type": "Neptune",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1045",
+        "type": "Neptune",
+        "severity": "Critical"
+    },
+    {
+        "id": "TH-1046",
+        "type": "DoS",
+        "severity": "Critical"
+    },
+    {
+        "id": "TH-1047",
+        "type": "Probe",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1048",
+        "type": "DoS",
+        "severity": "High"
+    },
+    {
+        "id": "TH-1049",
+        "type": "Neptune",
+        "severity": "High"
+    }
+]
