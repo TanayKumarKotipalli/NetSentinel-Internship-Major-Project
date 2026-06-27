@@ -1,4 +1,3 @@
-import IntroScreen from "./IntroScreen";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import {
@@ -54,7 +53,6 @@ const [todayScans, setTodayScans] = useState(0);
 const [showToast, setShowToast] = useState(false);
 const [trend, setTrend] = useState("Stable");
 const [previousHigh, setPreviousHigh] = useState(0);
-const [showIntro, setShowIntro] = useState(false);
   const runThreatAnalysis = async () => {
 
     try {
@@ -284,9 +282,6 @@ axios
   });
 
   }, []);
-/*if(showIntro){
-    return <IntroScreen onFinish={()=>setShowIntro(false)} />;
-}*/
  if (
   !data ||
   !analytics ||
