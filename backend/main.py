@@ -6,6 +6,8 @@ from pydantic import BaseModel
 import numpy as np
 import threading
 from packet_sniffer import start_sniffer
+from replay_engine import start_replay
+import os
 from traffic_store import (
     get_packets,
     get_stats,
@@ -34,10 +36,24 @@ class PredictionInput(BaseModel):
 app = FastAPI(
     title="NetSentinel API"
 )
-threading.Thread(
-    target=start_sniffer,
-    daemon=True
-).start()
+# Run Replay Engine on Render, Scapy locally
+if os.getenv("DEMO_MODE") == "true":
+
+    print("Running Replay Engine...")
+
+    threading.Thread(
+        target=start_replay,
+        daemon=True
+    ).start()
+
+else:
+
+    print("Running Live Packet Sniffer...")
+
+    threading.Thread(
+        target=start_sniffer,
+        daemon=True
+    ).start()
 from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(

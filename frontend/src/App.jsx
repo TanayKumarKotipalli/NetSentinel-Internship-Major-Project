@@ -65,12 +65,12 @@ const [showIntro, setShowIntro] = useState(false);
 
         const verdictResponse =
             await axios.get(
-                "http://127.0.0.1:8001/api/ai-verdict"
+                "https://netsentinel-backend-q35i.onrender.com/api/ai-verdict"
             );
 
         const statsResponse =
             await axios.get(
-                "http://127.0.0.1:8001/api/live-stats"
+                "https://netsentinel-backend-q35i.onrender.com/api/live-stats"
             );
 
         setAiVerdict(
@@ -141,7 +141,7 @@ const [showIntro, setShowIntro] = useState(false);
 };
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8001/api/dashboard")
+      .get("https://netsentinel-backend-q35i.onrender.com/api/dashboard")
       .then((response) => {
         setData(response.data);
       })
@@ -150,7 +150,7 @@ const [showIntro, setShowIntro] = useState(false);
       });
 
     axios
-      .get("http://127.0.0.1:8001/api/threats")
+      .get("https://netsentinel-backend-q35i.onrender.com/api/threats")
       .then((response) => {
         setThreats(response.data);
       })
@@ -158,7 +158,7 @@ const [showIntro, setShowIntro] = useState(false);
         console.error(error);
       });
     axios
-  .get("http://127.0.0.1:8001/api/analytics")
+  .get("https://netsentinel-backend-q35i.onrender.com/api/analytics")
   .then((response) => {
     setAnalytics(response.data);
   })
@@ -166,13 +166,13 @@ const [showIntro, setShowIntro] = useState(false);
     console.error(error);
   });
   axios
-  .get("http://127.0.0.1:8001/api/predictions")
+  .get("https://netsentinel-backend-q35i.onrender.com/api/predictions")
   .then((response) => {
     setPredictions(response.data);
   });
 const fetchTraffic = () => {
   axios
-    .get("http://127.0.0.1:8001/api/live-traffic")
+    .get("https://netsentinel-backend-q35i.onrender.com/api/live-traffic")
     .then((response) => {
       setLiveTraffic(response.data);
     })
@@ -180,30 +180,30 @@ const fetchTraffic = () => {
       console.error(error);
     });
     axios
-  .get("http://127.0.0.1:8001/api/protocol-stats")
+  .get("https://netsentinel-backend-q35i.onrender.com/api/protocol-stats")
   .then((response) => {
     setProtocolStats(response.data);
   });
   axios
-  .get("http://127.0.0.1:8001/api/top-threats")
+  .get("https://netsentinel-backend-q35i.onrender.com/api/top-threats")
   .then((response) => {
     setTopThreats(response.data);
   });
   axios
-  .get("http://127.0.0.1:8001/api/threat-feed")
+  .get("https://netsentinel-backend-q35i.onrender.com/api/threat-feed")
   .then((response) => {
     setThreatFeed(response.data);
   });
   axios
   .get(
-    "http://127.0.0.1:8001/api/threat-history"
+    "https://netsentinel-backend-q35i.onrender.com/api/threat-history"
   )
   .then((response) => {
     setThreatHistory(response.data);
   });
   axios
   .get(
-    "http://127.0.0.1:8001/api/attack-distribution"
+    "https://netsentinel-backend-q35i.onrender.com/api/attack-distribution"
   )
   .then((response) => {
     setAttackDistribution(response.data);
@@ -213,7 +213,7 @@ const fetchTraffic = () => {
 const fetchLiveStats = () => {
   axios
     .get(
-      "http://127.0.0.1:8001/api/live-threat-stats"
+      "https://netsentinel-backend-q35i.onrender.com/api/live-threat-stats"
     )
     .then((response) => {
       setLiveStats(response.data);
@@ -233,7 +233,7 @@ const trafficInterval = setInterval(
 );
 const fetchTopIps = () => {
   axios
-    .get("http://127.0.0.1:8001/api/top-ips")
+    .get("https://netsentinel-backend-q35i.onrender.com/api/top-ips")
     .then((response) => {
       setTopIps(response.data);
     });
@@ -278,7 +278,7 @@ return () => {
   clearInterval(countdown);
 };
 axios
-  .get("http://127.0.0.1:8001/api/top-ips")
+  .get("https://netsentinel-backend-q35i.onrender.com/api/top-ips")
   .then((response) => {
     setTopIps(response.data);
   });
@@ -319,7 +319,7 @@ axios
         setLookupSuccess(false);
 
         const response = await axios.get(
-    `http://127.0.0.1:8001/api/ip-info/${lookupIP}`
+    `https://netsentinel-backend-q35i.onrender.com/api/ip-lookup/${lookupIP}`
 );
 
         setIpInfo(response.data);
@@ -398,92 +398,12 @@ const copyIP = () => {
 };
 const generateReport = async () => {
 
-  try {
-
-    const response = await axios.get(
-      "http://127.0.0.1:8001/api/security-report"
-    );
-
-    const report = response.data;
-
-    const reportText = `
-====================================================
-              NETSENTINEL SECURITY REPORT
-====================================================
-
-Generated On:
-${report.generated_at}
-
-====================================================
-NETWORK SUMMARY
-====================================================
-
-Total Packets Captured : ${report.stats.total_packets}
-
-Safe Packets           : ${report.stats.safe}
-
-Medium Risk Packets    : ${report.stats.medium}
-
-High Risk Packets      : ${report.stats.high}
-
-====================================================
-AI THREAT ANALYSIS
-====================================================
-
-AI Verdict             : ${report.verdict}
-
-====================================================
-TOP THREAT SOURCE
-====================================================
-
-${report.top_threat_ip}
-
-====================================================
-PROTOCOL DISTRIBUTION
-====================================================
-
-TCP   : ${report.protocols.tcp}
-
-UDP   : ${report.protocols.udp}
-
-ICMP  : ${report.protocols.icmp}
-
-OTHER : ${report.protocols.other}
-
-====================================================
-Generated by NetSentinel AI
-====================================================
-`;
-
-    const blob = new Blob(
-      [reportText],
-      { type: "text/plain" }
-    );
-
-    const url = window.URL.createObjectURL(blob);
-
-    const link = document.createElement("a");
-
-    link.href = url;
-
-    link.download = `NetSentinel_Report_${Date.now()}.txt`;
-
-    document.body.appendChild(link);
-
-    link.click();
-
-    document.body.removeChild(link);
-
-    window.URL.revokeObjectURL(url);
-
-  } catch (error) {
-
-    console.error(error);
-
-  }
+  window.open(
+    "https://netsentinel-backend-q35i.onrender.com/api/security-report",
+    "_blank"
+  );
 
 };
-
 const protocolChartData = protocolStats
   ? [
       {
