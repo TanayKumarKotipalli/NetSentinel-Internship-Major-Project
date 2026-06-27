@@ -61,7 +61,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://localhost:5174",
-        "https://net-sentinel-internship-major-proje.vercel.app/"
+        "https://net-sentinel-internship-major-proje.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
